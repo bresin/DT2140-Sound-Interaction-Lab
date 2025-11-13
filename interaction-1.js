@@ -95,15 +95,15 @@ function getMinMaxParam(address) {
 //
 //==========================================================================================
 
-function playAudio() {
+function playAudio(strikePosition) {
     if (!dspNode) {
         return;
     }
     if (audioContext.state === 'suspended') {
         return;
     }
-    dspNode.setParamValue("/englishBell/gate", 1)
-    setTimeout(() => { dspNode.setParamValue("/englishBell/gate", 0) }, 100);
+    console.log(strikePosition);
+    dspNode.setParamValue("/englishBell/strikePosition", strikePosition)
 }
 
 //==========================================================================================
