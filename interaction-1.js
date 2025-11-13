@@ -52,7 +52,7 @@ bells.createDSP(audioContext, 1024)
 //==========================================================================================
 
 function accelerationChange(accx, accy, accz) {
-    // playAudio()
+     playAudio()
 }
 
 function rotationChange(rotx, roty, rotz) {
@@ -74,7 +74,7 @@ function deviceTurned() {
 function deviceShaken() {
     shaketimer = millis();
     statusLabels[0].style("color", "pink");
-    playAudio();
+   // playAudio();
 }
 
 function getMinMaxParam(address) {
@@ -103,7 +103,7 @@ function playAudio() {
         return;
     }
     dspNode.setParamValue("/englishBell/gate", 1)
-    //setTimeout(() => { dspNode.setParamValue("/englishBell/gate", 0) }, 1000);
+    setTimeout(() => { dspNode.setParamValue("/englishBell/gate", 0) }, 1000);
 }
 
 //==========================================================================================
