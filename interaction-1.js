@@ -103,7 +103,7 @@ function playAudio() {
         return;
     }
     dspNode.setParamValue("/englishBell/gate", 1)
-    setTimeout(() => { dspNode.setParamValue("/englishBell/gate", 0) }, 100);
+    //setTimeout(() => { dspNode.setParamValue("/englishBell/gate", 0) }, 1000);
 }
 
 //==========================================================================================
